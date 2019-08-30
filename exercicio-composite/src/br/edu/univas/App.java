@@ -3,14 +3,16 @@ package br.edu.univas;
 public class App {
 
 	public static void main(String[] args) {
-		Circle c = new Circle();
-		c.draw();
+		Container container1 = new Container();
+		container1.addComponent(new Circle());
+		container1.addComponent(new Square());
+		container1.addComponent(new Rectangle());
 		
-		Square s = new Square();
-		s.draw();
+		Container container2 = new Container();
+		container2.addComponent(new Circle());
+		container2.addComponent(new Circle());
 		
-		Rectangle r = new Rectangle();
-		r.draw();
-		
+		container1.addComponent(container2);
+		container1.draw();
 	}
 }
