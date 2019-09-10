@@ -1,13 +1,13 @@
 package br.edu.univas;
 
-public class Bulbs {
+public class Bulbs extends TreeDecorator {
 
 	public Bulbs(ChristmasTree decorator) {
-		
+		super(decorator);
 	}
 	
 	public String decorate() {
-        return null;
+        return super.decorate() + decorateWithBubbleLights();
     }
      
     private String decorateWithBubbleLights() {

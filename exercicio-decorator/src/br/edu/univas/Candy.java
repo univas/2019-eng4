@@ -1,13 +1,13 @@
 package br.edu.univas;
 
-public class Candy {
+public class Candy extends TreeDecorator {
 
 	public Candy(ChristmasTree decorator) {
-		
+		super(decorator);
 	}
 
 	public String decorate() {
-        return null;
+        return super.decorate() + decorateWithColoredCandy();
     }
      
     private String decorateWithColoredCandy() {

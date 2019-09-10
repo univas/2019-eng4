@@ -5,7 +5,7 @@ public abstract class TreeDecorator implements ChristmasTree {
 	private ChristmasTree decorator;
 	
 	public TreeDecorator(ChristmasTree decorator) {
-		
+		this.decorator = decorator;
 	}
 	
 	@Override

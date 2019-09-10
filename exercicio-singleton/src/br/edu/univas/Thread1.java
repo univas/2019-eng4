@@ -8,7 +8,7 @@ public class Thread1 extends Thread {
 	private MyLog log;
 	
 	public Thread1(String threadName) throws IOException {
-		log = new MyLog();
+		log = MyLog.getInstance();
 		this.name = threadName;
 		log.log("Creating " + this.name);
 	}
