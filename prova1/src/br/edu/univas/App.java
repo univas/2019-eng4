@@ -12,22 +12,33 @@ public class App {
 		System.out.print("Digite sua opção:");
 		int option = scanner.nextInt();
 		
-		if (option == 1) {
-			PedidoDAOXML pedidoDaoXml = new PedidoDAOXML();
-			pedidoDaoXml.insertPedido(new Pedido());
-			pedidoDaoXml.listPedidos();
-			
-			ProdutoDAOXML produtoDaoXml = new ProdutoDAOXML();
-			produtoDaoXml.insertProduto(new Produto());
-			produtoDaoXml.listProdutos();
-		} else if (option == 2) {
-			PedidoDAORDB pedidoDaoRdb = new PedidoDAORDB();
-			pedidoDaoRdb.insertPedido(new Pedido());
-			pedidoDaoRdb.listPedidos();
-			
-			ProdutoDAORDB produtoDaoRdb = new ProdutoDAORDB();
-			produtoDaoRdb.insertProduto(new Produto());
-			produtoDaoRdb.listProdutos();
-		}
+		AbstractFactory factory = FactoryProvider.getFactory(option);
+		
+		PedidoDAO pedidoDAO = factory.getPedidoDAO();
+		pedidoDAO.insertPedido(new Pedido());
+		pedidoDAO.listPedidos();
+		
+		ProdutoDAO produtoDAO = factory.getProdutoDAO();
+		produtoDAO.insertProduto(new Produto());
+		produtoDAO.listProdutos();
+		
+		
+//		if (option == 1) {
+//			PedidoDAOXML pedidoDaoXml = new PedidoDAOXML();
+//			pedidoDaoXml.insertPedido(new Pedido());
+//			pedidoDaoXml.listPedidos();
+//			
+//			ProdutoDAOXML produtoDaoXml = new ProdutoDAOXML();
+//			produtoDaoXml.insertProduto(new Produto());
+//			produtoDaoXml.listProdutos();
+//		} else if (option == 2) {
+//			PedidoDAORDB pedidoDaoRdb = new PedidoDAORDB();
+//			pedidoDaoRdb.insertPedido(new Pedido());
+//			pedidoDaoRdb.listPedidos();
+//			
+//			ProdutoDAORDB produtoDaoRdb = new ProdutoDAORDB();
+//			produtoDaoRdb.insertProduto(new Produto());
+//			produtoDaoRdb.listProdutos();
+//		}
 	}
 }
