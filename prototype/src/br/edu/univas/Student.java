@@ -1,16 +1,11 @@
 package br.edu.univas;
 
-<<<<<<< HEAD
 public class Student implements Prototype {
-=======
-public class Student {
->>>>>>> fe5caffb445059c31dd393f57fc6ef1956fa7ab6
 
 	private String name;
 	private String email;
 	private String cpf;
 
-<<<<<<< HEAD
 	public Student() {
 		
 	}
@@ -21,8 +16,6 @@ public class Student {
 		this.cpf = cpf;
 	}
 	
-=======
->>>>>>> fe5caffb445059c31dd393f57fc6ef1956fa7ab6
 	public String getName() {
 		return name;
 	}
@@ -52,12 +45,9 @@ public class Student {
 		return "Student [name=" + name + ", email=" + email + ", cpf=" + cpf + "]";
 	}
 	
-<<<<<<< HEAD
 	@Override
 	public Prototype clone() {
 		return new Student(this.name, this.email, this.cpf);
 	}
 	
-=======
->>>>>>> fe5caffb445059c31dd393f57fc6ef1956fa7ab6
 }
