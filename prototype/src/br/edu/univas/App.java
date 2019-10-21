@@ -10,8 +10,11 @@ public class App {
 		
 		System.out.println(studentA);
 		
+<<<<<<< HEAD
 		Student studentB = (Student) studentA.clone();
 		System.out.println(studentB);
+=======
+>>>>>>> fe5caffb445059c31dd393f57fc6ef1956fa7ab6
 	}
 	
 }
