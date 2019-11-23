@@ -23,17 +23,8 @@ public class App {
 		List<Flight> flights = flightDAO.getAll();
 		
 		for (Flight flight : flights) {
-			//TODO DESCOMENTAR ESSA LINHA
-			//System.out.println(flight);
+			System.out.println(flight);
 		}
-		
-		
-		ZonedDateTime time = ZonedDateTime.parse("2019-09-20T06:05:00+00:00[America/Sao_Paulo]");
-		ZoneId utcZoneID = ZoneId.of("America/Los_Angeles");
-		LocalDateTime ldt = time.toLocalDateTime();
-		ZonedDateTime asd = ldt.atZone(utcZoneID);
-		System.out.println(asd);
-		
 	}
 }
 
