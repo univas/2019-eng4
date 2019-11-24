@@ -5,12 +5,21 @@ import java.util.Map;
 
 public class ExpressionCache {
 
+	private static ExpressionCache instance;
 	private Map<String, Double> cache;
 	
-	public ExpressionCache() {
-		cache = new HashMap();
+	private ExpressionCache() {
+		cache = new HashMap<>();
 	}
-	
+
+	public static ExpressionCache getInstance() {
+		if (instance == null) {
+			instance = new ExpressionCache();
+		}
+
+		return instance;
+	}
+
 	public void add(String expression, Double result) {
 		cache.put(expression, result);
 	}

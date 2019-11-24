@@ -28,7 +28,7 @@ public class App {
 		ScriptEngineManager engineManager = new ScriptEngineManager();
 		ScriptEngine engine = engineManager.getEngineByName("JavaScript");
 
-		ExpressionCache cache = new ExpressionCache();		
+		ExpressionCache cache = ExpressionCache.getInstance();
 
 		try {
 			while (true) {
